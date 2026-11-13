@@ -1,0 +1,24 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  pub: CollectionEntry<'publications'>;
+}
+
+const { title, authors, venue, link, note } = Astro.props.pub.data;
+// Bold the PI's name (e.g. "Engelhard MM", "Engelhard M*") in the author list.
+const parts = authors.split(/(Engelhard [A-Z]{1,2}\*?)/);
+---
+
+<li class="pub">
+  {parts.map((part, i) => (i % 2 ? <strong>{part}</strong> : part))}.
+  {link ? <a href={link}>{title}</a> : <span class="title">{title}</span>}.
+  <em>{venue}</em>.
+  {note && <span class="note">{note}</span>}
+</li>
+
+<style>
+  .pub { margin: 0 0 0.9em; }
+  .title { font-weight: 500; }
+  .note { color: var(--muted); }
+</style>

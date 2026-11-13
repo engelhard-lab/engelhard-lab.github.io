@@ -1,0 +1,73 @@
+---
+import '../styles/global.css';
+import '../styles/accents.css'; // optional color accents; delete this line to remove them all
+import { SITE, NAV } from '../site';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description = SITE.tagline } = Astro.props;
+const pageTitle = title ? `${title} | ${SITE.name}` : `${SITE.name} | ${SITE.affiliation}`;
+const path = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={new URL(path, Astro.site)} />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap bar">
+        <a class="brand" href="/">{SITE.name}</a>
+        <nav aria-label="Main">
+          {NAV.map((item) => (
+            <a href={item.href} aria-current={path.startsWith(item.href) ? 'page' : undefined}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <slot />
+    </main>
+
+    <footer class="wrap site-footer">
+      {SITE.name}, {SITE.affiliation}
+    </footer>
+  </body>
+</html>
+
+<style>
+  .site-header { border-bottom: 1px solid var(--line); }
+  .bar {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .brand { font-size: 1.25rem; font-weight: 600; color: var(--text); text-decoration: none; }
+  nav { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
+  nav a { color: var(--text); text-decoration: none; }
+  nav a:hover, nav a[aria-current='page'] { color: var(--link); text-decoration: underline; }
+
+  main { padding-top: 2rem; padding-bottom: 3rem; min-height: 50vh; }
+
+  .site-footer {
+    border-top: 1px solid var(--line);
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+</style>

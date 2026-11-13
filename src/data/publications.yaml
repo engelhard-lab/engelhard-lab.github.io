@@ -1,0 +1,550 @@
+# Lab publications, from the CV. Newest first within each year.
+# Fields: title, authors (as written in the CV), venue (journal/conference and details), year.
+# Optional: link (DOI or URL), type: chapter or preprint, note.
+# Mark co-senior/co-first authors with * in the author list.
+
+- id: weng2026when
+  title: 'When are time-to-event models a waste of time? Bridging mixture cure models and positive-unlabeled learning for binary classification under right-censoring'
+  authors: Weng Q, Engelhard MM
+  venue: arXiv preprint arXiv:2609.19370
+  year: 2026
+  link: https://arxiv.org/abs/2609.19370
+  type: preprint
+- id: zhao2026integrating
+  title: Integrating Neural Encoders in Bayesian Generalized Linear Mixed Models for Multimodal Data
+  authors: Zhao Y, Baek Y, Medeiros FA, Berchuck S, Engelhard MM
+  venue: arXiv preprint arXiv:2607.04647
+  year: 2026
+  link: https://arxiv.org/abs/2607.04647
+  type: preprint
+- id: wang2026towards
+  title: 'Towards Fair Predictions: Group Conditional Concordance Index to Quantify Fairness in Time-to-Event Prognostication'
+  authors: Wang H, Bhattacharya R, Henao R, Wojdyla D, Hong C, Engelhard M
+  venue: arXiv preprint arXiv:2606.16872
+  year: 2026
+  link: https://arxiv.org/abs/2606.16872
+  type: preprint
+- id: li2026double
+  title: Double Variable Importance Matching to Estimate Distinct Causal Effects on Event Probability and Timing
+  authors: Li Y, Lanners Q, Engelhard MM
+  venue: arXiv preprint arXiv:2602.05022
+  year: 2026
+  link: https://arxiv.org/abs/2602.05022
+  type: preprint
+- id: sun2026nest
+  title: 'NEST: Nested Event Stream Transformer for Sequences of Multisets'
+  authors: Sun M, Gong H, You X, Hurst J, Goldstein B, Engelhard M
+  venue: arXiv preprint arXiv:2602.00520
+  year: 2026
+  link: https://arxiv.org/abs/2602.00520
+  type: preprint
+- id: li2026interval
+  title: 'Interval-Based AUC (iAUC): Extending ROC Analysis to Uncertainty-Aware Classification'
+  authors: Li Y, Engelhard MM
+  venue: Advances in Neural Information Processing Systems (NeurIPS 2026)
+  year: 2026
+  link: https://arxiv.org/abs/2602.04775
+- id: li2026evigen
+  title: 'EviGen: Predictive Evidence Scaffolding for Verifiable Clinical Rationale Generation'
+  authors: Li F, Burre H, Sun L, Varma R, Engelhard MM
+  venue: 'Findings of the Association for Computational Linguistics: EMNLP 2026. 2026'
+  year: 2026
+  link: https://doi.org/10.18653/2026.findings-emnlp.1632
+- id: sperling2026based
+  title: 'AI–based clinical prediction models for early autism detection: ethical considerations and use implications across caregivers, autistic adults, and clinical providers'
+  authors: Sperling J, Haseley E, Quenstedt S, Jones LD, Brandsen S, Brown A, Muhigaba PB, Dawson G, Engelhard M, Maslow G, Goldstein BA
+  venue: BMC Medical Ethics. 2026 Oct 10
+  year: 2026
+  link: https://doi.org/10.1186/s12910-026-01634-w
+- id: pisetsky2026relationship
+  title: The relationship between autoantibody and complement levels in the sera of patients with systemic lupus erythematosus
+  authors: Pisetsky DS, Zhao Y, Engelhard M, Eudy A, Tedeschi P, O'Malley T, Alexander RV, Clowse M, Criscione-Schreiber L, Doss J, Maheswaranathan M
+  venue: Clinical Immunology. 2026 Sep 25:110779
+  year: 2026
+  link: https://doi.org/10.1016/j.clim.2026.110779
+- id: weng2026censoring
+  title: Censoring-Aware Reinforcement Learning to Optimize Early Risk Alerts from Longitudinal Clinical Data
+  authors: Weng Q, Goldstein B, Engelhard MM
+  venue: Proceedings of the 2026 Conference on Machine Learning for Healthcare (MLHC), PMLR. p. 2151–74
+  year: 2026
+  link: https://proceedings.mlr.press/v340/weng26a.html
+- id: wang2026simplified
+  title: 'A Simplified Metric to Streamline Between-Group Fairness Assessment for Predictive Models: Algorithm Development and Evaluation Study'
+  authors: Wang H, Hong C, Pencina M, Engelhard M
+  venue: JMIR AI. 2026;5:e85822
+  year: 2026
+  link: https://doi.org/10.2196/85822
+- id: wang2026multimodal
+  title: 'Multimodal Training to Unimodal Deployment: Leveraging Unstructured Data During Training to Optimize Structured Data Only Deployment'
+  authors: Wang Z, Sun M, Shu J, Engelhard MM, Franz L, Goldstein BA
+  venue: AMIA Summits on Translational Science Proceedings. 2026;2026:486
+  year: 2026
+  link: https://pubmed.ncbi.nlm.nih.gov/42317823/
+- id: shu2026using
+  title: Using clinical notes to identify children with speech-language delay and understand differences in diagnostic timing
+  authors: Shu J, Fannin DK, Dawson G, Maslow G, Engelhard MM, Franz L, et al
+  venue: JAMIA open. 2026;9(3):ooag090
+  year: 2026
+  link: https://doi.org/10.1093/jamiaopen/ooag090
+- id: flannery2026leveraging
+  title: 'Leveraging convenient wearable technology to assess adolescent sleep: physical and behavioral health correlates of single-channel sleep electroencephalogram in a community sample of youth'
+  authors: Flannery JL, Engelhard MM, Kansagra S, Kollins SH, Krystal A, Lunsford-Avery JR
+  venue: Journal of Clinical Sleep Medicine. 2026;22(1):113
+  year: 2026
+  link: https://doi.org/10.1007/s44470-026-00118-3
+- id: emovon2026understanding
+  title: Understanding end-user contexts and identifying design preferences of an artificial intelligence-based clinical decision support tool for early autism detection
+  authors: Emovon A, Driggers-Jones L, Engelhard M, Maslow G, Dawson G, Goldstein BA, et al
+  venue: JAMIA open. 2026;9(4):ooag145
+  year: 2026
+  link: https://doi.org/10.1093/jamiaopen/ooag145
+- id: hong2026building
+  title: 'Building a Global Research Network for Fair, Accountable, Interpretable, and Responsible AI in Emergency Care: Protocol for a FAIR-EC Study'
+  authors: Hong C, Liew JCK, Yu J, Barry T, Blewer AL, Buckland DM, Engelhard MM, et al
+  venue: JMIR research protocols. 2026;15(1):e74202
+  year: 2026
+  link: https://doi.org/10.2196/74202
+- id: wang2026toward
+  title: 'Toward a Deeper Understanding of Predicting Risk of Cardiovascular Disease Events for 10-Year Atherosclerotic Cardiovascular Risk: Subgroup Fairness and Predictive Value of Social Determinants of Health'
+  authors: Wang H, Tian Z, Bhattacharya R, Niu M, Sang Y, Wojdyla DM, Engelhard MM, et al
+  venue: Journal of the American Heart Association. 2026;e046186
+  year: 2026
+  link: https://doi.org/10.1161/jaha.125.046186
+- id: cheng2026llms
+  title: Can LLMs Predict Patient Treatment Choices? A Discrete Choice Experiment Framework
+  authors: Cheng T, Gonzalez JM, Engelhard MM, Reed S, Ozdemir S
+  venue: Value in Health. 2026 May 5
+  year: 2026
+  link: https://doi.org/10.1016/j.jval.2026.04.006
+- id: hill2026early
+  title: Early attention deficit hyperactivity disorder prediction from longitudinal electronic health records
+  authors: Hill ED, Loh DR, Davis NO, Goldstein BA, Dawson G, Engelhard M
+  venue: Nature Mental Health. 2026 Apr 27:1-0
+  year: 2026
+  link: https://doi.org/10.1038/s44220-026-00628-2
+- id: hong2026performance
+  title: Performance of PREVENT Cardiovascular Risk in Electronic Health Record–Based Clinical Practice
+  authors: Hong C, Niu M, Wang H, Wojdyla DM, Economou-Zavlanos N, Engelhard MM, Pignone M, Patel MR, Pencina MJ
+  venue: JAMA Network Open. 2026 Apr 14;9(4):e266838
+  year: 2026
+  link: https://doi.org/10.1001/jamanetworkopen.2026.6838
+- id: zhao2025balancing
+  title: Balancing interpretability and flexibility in modeling diagnostic trajectories with an embedded neural Hawkes process model
+  authors: Zhao Y, Engelhard MM
+  venue: Proceedings of the 2025 Conference on Machine Learning for Healthcare (MLHC), PMLR, 2025
+  year: 2025
+  link: https://proceedings.mlr.press/v298/zhao25a.html
+- id: sun2025borrowing
+  title: 'Borrowing From the Future: Enhancing Early Risk Assessment through Contrastive Learning'
+  authors: Sun M, Engelhard MM, Goldstein BA
+  venue: Proceedings of the 2025 Conference on Machine Learning for Healthcare (MLHC), PMLR, 2025
+  year: 2025
+  link: https://proceedings.mlr.press/v298/sun25a.html
+- id: li2025iris
+  title: 'IRIS: Interpretable Retrieval-Augmented Classification for Long Interspersed Document Sequences'
+  authors: Li F, Hill ED, Shu J, Gao J, Engelhard MM
+  venue: Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (ACL), 2025
+  year: 2025
+  link: https://doi.org/10.18653/v1/2025.acl-long.1461
+- id: yan2025predicting
+  title: Predicting Partially Observed Long-Term Outcomes with Adversarial Positive-Unlabeled Domain Adaptation
+  authors: Yan M, Xia M, Huang WA, Hong C, Goldstein BA, Engelhard MM
+  venue: Proceedings of the 2025 Conference on Health, Inference, and Learning (CHIL), PMLR, 2025
+  year: 2025
+  link: https://proceedings.mlr.press/v287/yan25a.html
+- id: liu2025fairpot
+  title: 'FairPOT: Balancing AUC Performance and Fairness with Proportional Optimal Transport'
+  authors: Liu P, Shen Y, Engelhard MM, Goldstein BA, Pencina MJ, Economou-Zavlanos NJ, Zavlanos MM
+  venue: Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society, 2025
+  year: 2025
+  link: https://doi.org/10.1609/aies.v8i2.36660
+- id: wu2025using
+  title: 'Using mixture cure models to address algorithmic bias in diagnostic timing: autism as a test case'
+  authors: Wu P, Davis NO, Engelhard MM, Dawson G, Goldstein BA
+  venue: JAMIA Open, 2025
+  year: 2025
+  link: https://doi.org/10.1093/jamiaopen/ooaf148
+- id: wang2025discrete
+  title: 'Discrete Time Neural Network Models to address time-varying predictor importance: An illustration in predicting mortality over different time horizons'
+  authors: Wang M, Engelhard MM, Pun PH, Goldstein BA
+  venue: IEEE Journal of Biomedical and Health Informatics, 2025
+  year: 2025
+  link: https://doi.org/10.1109/jbhi.2025.3599477
+- id: foote2025machine
+  title: Machine Learning Risk Prediction for Treated Retinopathy of Prematurity in Infants
+  authors: Foote HP, Ou YJ, Bhatt S, Engelhard MM, et al
+  venue: Neonatology, 2025
+  year: 2025
+  link: https://doi.org/10.1159/000549574
+- id: wang2025improving
+  title: Improving Pediatric Retinal Disease AI Screening Tools Constrained by Limited Data Using Synthetic Generation of Ultra-widefield Fundus Photos
+  authors: Wang D, Ownagh V, Hsu ST, Valikodath N, Kuo AN, Engelhard M, Vajzovic L
+  venue: Investigative Ophthalmology & Visual Science, 2025
+  year: 2025
+- id: sweitzer2025effects
+  title: Effects of initial nicotine exposure on cognition and nicotine reinforcement among non-smoking young adults with and without attention deficit hyperactivity disorder
+  authors: Sweitzer MM, Lazzari J, Lunsford-Avery J, McClernon FJ, Kollins SH, Perkins KA, Engelhard M
+  venue: Journal of Psychopharmacology, 2025
+  year: 2025
+  link: https://doi.org/10.1177/02698811251344687
+- id: roberts2025artificial
+  title: Can artificial intelligence pass the test? Evaluating chatbot scores on pediatric gastroenterology board-style questions
+  authors: Roberts AG, Patel R, Babu S, Engelhard MM, Greenberg RG, Ajmera A
+  venue: JPGN Reports, 2025
+  year: 2025
+  link: https://doi.org/10.1002/jpr3.70121
+- id: doerstling2025impact
+  title: 'Impact of Medical Conditions and Area Deprivation on Fundraising Success in Online Crowdfunding: Cross-Sectional Study'
+  authors: Doerstling SS, Engelhard MM, Akrobetu D, et al
+  venue: Journal of Medical Internet Research, 2025
+  year: 2025
+  link: https://doi.org/10.2196/72475
+- id: engelhard2025exploring
+  title: Exploring trade-offs in equitable stroke risk prediction with parity-constrained and race-free models
+  authors: Engelhard M, Wojdyla D, Wang H, Pencina M, Henao R
+  venue: Artificial Intelligence in Medicine. 2025 Apr 10:103130
+  year: 2025
+  link: https://doi.org/10.1016/j.artmed.2025.103130
+- id: hill2025prediction
+  title: Prediction of mental health risk in adolescents
+  authors: Hill ED, Kashyap P, Raffanello E, Wang Y, Moffitt TE, Caspi A, Engelhard M*, Posner J*
+  venue: Nature Medicine 2025:1–7
+  year: 2025
+  link: https://doi.org/10.1038/s41591-025-03560-7
+- id: loh2025limitations
+  title: 'Limitations of Binary Classification for Long-Horizon Diagnosis Prediction and Advantages of a Discrete-Time Time-to-Event Approach: Empirical Analysis'
+  authors: Loh DR, Hill ED, Liu N, Dawson G, Engelhard MM
+  venue: JMIR AI 2025;4:e62985
+  year: 2025
+  link: https://doi.org/10.2196/62985
+- id: kumar2025cross
+  title: A Cross-Sectional Study of GPT-4–Based Plain Language Translation of Clinical Notes to Improve Patient Comprehension of Disease Course and Management
+  authors: Kumar A, Wang H, Muir KW, Mishra V, Engelhard M
+  venue: NEJM AI 2025;2:AIoa2400402
+  year: 2025
+  link: https://doi.org/10.1056/aioa2400402
+- id: song2024roboctnet
+  title: 'RobOCTNet: robotics and deep learning for referable posterior segment pathology detection in an emergency department population'
+  authors: Song A, Lusk JB, Roh K-M, Hsu ST, Valikodath NG, Lad EM, Muir KW, Engelhard MM, Limkakeng AT, Izatt JA, McNabb RP, Kuo AN
+  venue: Translational Vision Science & Technology 2024;13:12–12
+  year: 2024
+  link: https://doi.org/10.1167/tvst.13.3.12
+- id: huang2024infinite
+  title: Infinite hierarchical contrastive clustering for personal digital envirotyping
+  authors: Huang Y, McClernon FJ, and Engelhard MM
+  venue: Findings of Machine Learning for Health (ML4H), December 2024
+  year: 2024
+  link: https://arxiv.org/abs/2505.15022
+- id: li2024neural
+  title: On neural networks as infinite tree-structured probabilistic graphical models
+  authors: Li B, Thomson A, Engelhard M*, Page D*
+  venue: Advances in Neural Information Processing Systems 2024;37:4598–628
+  year: 2024
+  link: https://doi.org/10.52202/079017-0150
+- id: meng2024maternal
+  title: Maternal morbidity according to mode of delivery among pregnant patients with pulmonary hypertension
+  authors: Meng M-L, Fuller M, Federspiel JJ, Engelhard M, McNeil A, Ernst L, Habib AS, Shah SH, Quist-Nelson J, Raghunathan K, Ohnuma T, Krishnamoorthy V
+  venue: Anesthesia & Analgesia 2024;138:1011–9
+  year: 2024
+  link: https://doi.org/10.1213/ane.0000000000006523
+- id: choi2024malade
+  title: 'MALADE: Orchestration of LLM-powered agents with retrieval augmented generation for pharmacovigilance'
+  authors: Choi J, Palumbo N, Chalasani P, Engelhard MM, Jha S, Kumar A, Page D
+  venue: arXiv Preprint arXiv:240801869 2024
+  year: 2024
+  link: https://arxiv.org/abs/2408.01869
+- id: sun2024incorporating
+  title: Incorporating informatively collected laboratory data from EHR in clinical prediction models
+  authors: Sun M, Engelhard MM, Bedoya AD, Goldstein BA
+  venue: BMC Medical Informatics and Decision Making 2024;24:206
+  year: 2024
+  link: https://doi.org/10.1186/s12911-024-02612-1
+- id: wang2024improving
+  title: Improving Artificial Intelligence–based Microbial Keratitis Screening Tools Constrained by Limited Data Using Synthetic Generation of Slit-Lamp Photos
+  authors: Wang D, Sklar B, Tian J, Gabriel R, Engelhard M, McNabb RP, Kuo AN
+  venue: Ophthalmology Science 2024;5:100676
+  year: 2024
+  link: https://doi.org/10.1016/j.xops.2024.100676
+- id: meng2024development
+  title: Development and Validation of a Predictive Model for Maternal Cardiovascular Morbidity Events in Patients With Hypertensive Disorders of Pregnancy
+  authors: Meng M-L, Li Y, Fuller M, Lanners Q, Habib AS, Federspiel JJ, Quist-Nelson J, Shah SH, Pencina M, Boggess K, Krishnamoorthy V, Engelhard MM
+  venue: Anesthesia & Analgesia 2024:10–1213
+  year: 2024
+  link: https://doi.org/10.1213/ane.0000000000007278
+- id: lanners2024common
+  title: Common Event Tethering to Improve Prediction of Rare Clinical Events
+  authors: Lanners Q, Weng Q, Meng M-L, Engelhard MM
+  venue: The 40th Conference on Uncertainty in Artificial Intelligence, 2024
+  year: 2024
+  link: https://proceedings.mlr.press/v244/lanners24a.html
+- id: hickey2024adaptive
+  title: Adaptive Discretization for Event PredicTion (ADEPT)
+  authors: Hickey J, Henao R, Wojdyla D, Pencina M, Engelhard M
+  venue: International Conference on Artificial Intelligence and Statistics, PMLR; 2024, p. 1351–9
+  year: 2024
+  link: https://proceedings.mlr.press/v238/hickey24a.html
+- id: huang2024conditional
+  title: 'A conditional multi-label model to improve prediction of a rare outcome: An illustration predicting autism diagnosis'
+  authors: Huang WA, Engelhard M, Coffman M, Hill ED, Weng Q, Scheer A, Maslow G, Henao R, Dawson G, Goldstein BA
+  venue: Journal of Biomedical Informatics 2024;157:104711
+  year: 2024
+  link: https://doi.org/g3w4nh
+- id: bidopia2023screen
+  title: 'Screen media technology and ADHD in children and adolescents: Potential perils and emerging opportunities'
+  authors: Bidopia T, Engelhard MM, Kollins SH, Lunsford-Avery JR
+  venue: Encyclopedia of Child and Adolescent Health, First Edition, 2023;3:260–274
+  year: 2023
+  type: chapter
+  link: https://doi.org/10.1016/b978-0-12-818872-9.00126-6
+- id: gu2023differences
+  title: Sex differences in the age of childhood autism diagnosis and the impact of co-occurring conditions
+  authors: Gu Z, Dawson G, Engelhard M
+  venue: Autism Research 2023;16:2391–402
+  year: 2023
+  link: https://doi.org/g3w4nq
+- id: meng2023severe
+  title: Severe maternal morbidity according to mode of delivery among pregnant patients with cardiomyopathies
+  authors: Meng M-L, Federspiel JJ, Fuller M, McNeil A, Habib AS, Quist-Nelson J, Engelhard M, Shah SH, Krishnamoorthy V
+  venue: Heart Failure 2023;11:1678–89
+  year: 2023
+  link: https://doi.org/10.1016/j.jchf.2023.09.012
+- id: engelhard2023predictive
+  title: Predictive value of early autism detection models based on electronic health record data collected before age 1 year
+  authors: Engelhard MM, Henao R, Berchuck SI, Chen J, Eichner B, Herkert D, Kollins SH, Olson A, Perrin EM, Rogers U, Sullivan C, Zhu YiQin, Sapiro G, Dawson G
+  venue: JAMA Network Open 2023;6:e2254303–e2254303
+  year: 2023
+  link: https://doi.org/10.1001/jamanetworkopen.2022.54303
+- id: hong2023predictive
+  title: Predictive accuracy of stroke risk prediction models across black and white race, sex, and age groups
+  authors: Hong C, Pencina MJ, Wojdyla DM, Hall JL, Judd SE, Cary M, Engelhard MM, Berchuck S, Xian Y, D’Agostino R, Howard G, Kissela B, Henao R
+  venue: Jama 2023;329:306–17
+  year: 2023
+  link: https://doi.org/10.1001/jama.2022.24683
+- id: chen2023enhancing
+  title: Enhancing early autism prediction based on electronic records using clinical narratives
+  authors: Chen J, Engelhard M, Henao R, Berchuck S, Eichner B, Perrin EM, Sapiro G, Dawson G
+  venue: Journal of Biomedical Informatics 2023;144:104390
+  year: 2023
+  link: https://doi.org/10.1016/j.jbi.2023.104390
+- id: glasgow2022sleep
+  title: 'Sleep onset, duration, or regularity: which matters most for child adiposity outcomes?'
+  authors: Glasgow TE, Adams EL, Ksinan A, Barsell DJ, Lunsford-Avery J, Chen S, Kollins S, Schechter JC, Maguire R, Engelhard M, Fuemmeler BF
+  venue: International Journal of Obesity 2022;46:1502–9
+  year: 2022
+  link: https://doi.org/10.1038/s41366-022-01140-0
+- id: lunsfordavery2022regularity
+  title: Regularity and timing of sleep patterns and behavioral health among adolescents
+  authors: Lunsford-Avery JR, Wang KW, Kollins SH, Chung RJ, Keller C, Engelhard MM
+  venue: Journal of Developmental & Behavioral Pediatrics 2022;43:188–96
+  year: 2022
+  link: https://doi.org/g3w4n4
+- id: lunsfordavery2022impact
+  title: Impact of daily caffeine intake and timing on electroencephalogram-measured sleep in adolescents
+  authors: Lunsford-Avery JR, Kollins SH, Kansagra S, Wang KW, Engelhard MM
+  venue: Journal of Clinical Sleep Medicine 2022;18:877–84
+  year: 2022
+  link: https://doi.org/10.5664/jcsm.9736
+- id: engelhard2022disentangling
+  title: Disentangling whether from when in a neural mixture cure model for failure time data
+  authors: Engelhard M, Henao R
+  venue: International Conference on Artificial Intelligence and Statistics, PMLR; 2022, p. 9571–81
+  year: 2022
+  link: https://proceedings.mlr.press/v151/engelhard22a.html
+- id: doerstling2022disease
+  title: 'A disease identification algorithm for medical crowdfunding campaigns: validation study'
+  authors: Doerstling SS, Akrobetu D, Engelhard MM, Chen F, Ubel PA
+  venue: Journal of Medical Internet Research 2022;24:e32867
+  year: 2022
+  link: https://doi.org/g3w4n8
+- id: subramanian2021spanpredict
+  title: 'SpanPredict: extraction of predictive document spans with neural attention'
+  authors: Subramanian V, Engelhard M, Berchuck S, Chen L, Henao R, Carin L
+  venue: 'Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, 2021, p. 5234–58'
+  year: 2021
+  link: https://doi.org/10.18653/v1/2021.naacl-main.413
+- id: engelhard2021prediction
+  title: 'Prediction of smoking risk from repeated sampling of environmental images: model validation'
+  authors: Engelhard MM, D’Arcy J, Oliver JA, Kozink R, McClernon FJ
+  venue: Journal of Medical Internet Research 2021;23:e27875
+  year: 2021
+  link: https://doi.org/g3w4ps
+- id: turpin2021machine
+  title: Machine Learning Prediction of Surgical Intervention for Small Bowel Obstruction
+  authors: Turpin M, Watson J, Engelhard M, Henao R, Thompson D, Carin L, Kirk A
+  venue: medRxiv 2021:2021–04
+  year: 2021
+  link: https://doi.org/10.1101/2021.04.13.21255428
+- id: engelhard2021incremental
+  title: Incremental benefits of machine learning—when do we need a better mousetrap?
+  authors: Engelhard MM, Navar AM, Pencina MJ
+  venue: JAMA Cardiology 2021;6:621–3
+  year: 2021
+  link: https://doi.org/10.1001/jamacardio.2021.0139
+- id: oliver2021identifying
+  title: 'Identifying neural signatures of tobacco retail outlet exposure: preliminary validation of a “community neuroscience” paradigm'
+  authors: Oliver JA, Sweitzer MM, Engelhard MM, Hallyburton MB, Ribisl KM, McClernon FJ
+  venue: Addiction Biology 2021;26:e13029
+  year: 2021
+  link: https://doi.org/10.1111/adb.13029
+- id: lunsfordavery2020sleep
+  title: Sleep/wake regularity associated with default mode network structure among healthy adolescents and young adults
+  authors: Lunsford-Avery JR, Damme KS, Engelhard MM, Kollins SH, Mittal VA
+  venue: Scientific Reports 2020;10:509
+  year: 2020
+  link: https://doi.org/10.1038/s41598-019-57024-3
+- id: vilardaga2020review
+  title: Review of popularity and quality standards of opioid-related smartphone apps
+  authors: Vilardaga R, Fisher T, Palenski PE, Kumaresan V, Mannelli P, Sweitzer MM, McClernon FJ, Engelhard MM, Sabo PL, Garrison KA
+  venue: Current Addiction Reports 2020;7:486–96
+  year: 2020
+  link: https://doi.org/10.1007/s40429-020-00344-6
+- id: engelhard2020neural
+  title: Neural conditional event time models
+  authors: Engelhard M, Berchuck S, D’Arcy J, Henao R
+  venue: Machine Learning for Healthcare Conference, PMLR; 2020, p. 223–44
+  year: 2020
+  link: https://proceedings.mlr.press/v126/engelhard20a.html
+- id: engelhard2020health
+  title: Health system utilization before age 1 among children later diagnosed with autism or ADHD
+  authors: Engelhard MM, Berchuck SI, Garg J, Henao R, Olson A, Rusincovitch S, Dawson G, Kollins SH
+  venue: Scientific Reports 2020;10:17677
+  year: 2020
+  link: https://doi.org/10.1038/s41598-020-74458-2
+- id: lunsfordavery2020feasibility
+  title: 'Feasibility and acceptability of wearable sleep electroencephalogram device use in adolescents: observational study'
+  authors: Lunsford-Avery JR, Keller C, Kollins SH, Krystal AD, Jackson L, Engelhard MM
+  venue: JMIR mHealth and uHealth 2020;8:e20590
+  year: 2020
+  link: https://doi.org/grs9b9
+- id: engelhard2020digital
+  title: 'Digital envirotyping: quantifying environmental determinants of health and behavior'
+  authors: Engelhard MM, Oliver JA, McClernon FJ
+  venue: NPJ Digital Medicine 2020;3:36
+  year: 2020
+  link: https://doi.org/10.1038/s41746-020-0245-3
+- id: engelhard2019many
+  title: 'The many channels of screen media technology in ADHD: a paradigm for quantifying distinct risks and potential benefits'
+  authors: Engelhard MM, Kollins SH
+  venue: Current Psychiatry Reports 2019;21:1–10
+  year: 2019
+  link: https://doi.org/10.1007/s11920-019-1077-1
+- id: engelhard2019identifying
+  title: Identifying smoking environments from images of daily life with deep learning
+  authors: Engelhard MM, Oliver JA, Henao R, Hallyburton M, Carin LE, Conklin C, McClernon FJ
+  venue: JAMA Network Open 2019;2:e197939–e197939
+  year: 2019
+  link: https://doi.org/10.1001/jamanetworkopen.2019.7939
+- id: raman2019driving
+  title: 'Driving the point home: novel approaches to mitigate crash risk for patients with ADHD'
+  authors: Raman S, Engelhard M, Kollins SH
+  venue: Pediatrics 2019;143
+  year: 2019
+  link: https://doi.org/10.1542/peds.2019-0820
+- id: chen2019generic
+  title: A generic algorithm for sleep-wake cycle detection using unlabeled actigraphy data
+  authors: Chen S, Perera R, Engelhard MM, Lunsford-Avery JR, Kollins SH, Fuemmeler BF
+  venue: 2019 IEEE EMBS International Conference on Biomedical & Health Informatics (BHI), IEEE; 2019, p. 1–4
+  year: 2019
+  link: https://doi.org/10.1109/bhi.2019.8834568
+- id: lunsfordavery2018validation
+  title: Validation of the sleep regularity index in older adults and associations with cardiometabolic risk
+  authors: Lunsford-Avery JR, Engelhard MM, Navar AM, Kollins SH
+  venue: Scientific Reports 2018;8:14158
+  year: 2018
+  link: https://doi.org/10.1038/s41598-018-32402-5
+- id: lefevre2018unpacking
+  title: 'Unpacking the performance of a mobile health information messaging program for mothers (MomConnect) in South Africa: evidence on program reach and messaging exposure'
+  authors: LeFevre AE, Dane P, Copley CJ, Pienaar C, Parsons AN, Engelhard M, Woods D, Bekker M, Benjamin P, Pillay Y
+  venue: BMJ Global Health 2018;3:e000583
+  year: 2018
+  link: https://doi.org/10.1136/bmjgh-2017-000583
+- id: engelhard2018real
+  title: 'Real-world walking in multiple sclerosis: separating capacity from behavior'
+  authors: Engelhard MM, Patek SD, Lach JC, Goldman MD
+  venue: Gait & Posture 2018;59:211–6
+  year: 2018
+  link: https://doi.org/10.1016/j.gaitpost.2017.10.015
+- id: engelhard2018predicting
+  title: Predicting smoking events with a time-varying semi-parametric Hawkes process model
+  authors: Engelhard M, Xu H, Carin L, Oliver JA, Hallyburton M, McClernon FJ
+  venue: Machine Learning for Healthcare Conference, PMLR; 2018, p. 312–31
+  year: 2018
+  link: https://proceedings.mlr.press/v85/engelhard18a.html
+- id: engelhard2018optimising
+  title: 'Optimising mHealth helpdesk responsiveness in South Africa: towards automated message triage'
+  authors: Engelhard M, Copley C, Watson J, Pillay Y, Barron P, LeFevre AE
+  venue: BMJ Global Health 2018;3:e000567
+  year: 2018
+  link: https://doi.org/10.1136/bmjgh-2017-000567
+- id: dandu2017understanding
+  title: Understanding the physiological significance of four inertial gait features in multiple sclerosis
+  authors: Dandu SR, Engelhard MM, Qureshi A, Gong J, Lach JC, Brandt-Pearce M, Goldman MD
+  venue: IEEE Journal of Biomedical and Health Informatics 2017;22:40–6
+  year: 2017
+  link: https://doi.org/gc8s2q
+- id: engelhard2017remotely
+  title: 'Remotely engaged: lessons from remote monitoring in multiple sclerosis'
+  authors: Engelhard MM, Patek SD, Sheridan K, Lach JC, Goldman MD
+  venue: International Journal of Medical Informatics 2017;100:26–31
+  year: 2017
+  link: https://doi.org/g3w4qm
+- id: qureshi2017relationship
+  title: Relationship between kernel density function estimates of gait time series and clinical data
+  authors: Qureshi A, Brandt-Pearce M, Engelhard MM, Goldman MD
+  venue: 2017 IEEE EMBS International Conference on Biomedical & Health Informatics (BHI), IEEE; 2017, p. 329–32
+  year: 2017
+  link: https://doi.org/g3w4qg
+- id: qureshi2017demonstrating
+  title: Demonstrating the real-world significance of the mid-swing to heel strike part of the gait cycle using spectral features
+  authors: Qureshi A, Engelhard MM, Brandt-Pearce M, Goldman MD
+  venue: 2017 IEEE 14th International Conference on Wearable and Implantable Body Sensor Networks (BSN), IEEE; 2017, p. 133–6
+  year: 2017
+  link: https://doi.org/g3w4p9
+- id: engelhard2016msws
+  title: 'The e-MSWS-12: improving the multiple sclerosis walking scale using item response theory'
+  authors: Engelhard MM, Schmidt KM, Engel CE, Brenton JN, Patek SD, Goldman MD
+  venue: Quality of Life Research 2016;25:3221–30
+  year: 2016
+  link: https://doi.org/f93czr
+- id: engelhard2016quantifying
+  title: Quantifying six-minute walk induced gait deterioration with inertial sensors in multiple sclerosis subjects
+  authors: Engelhard MM, Dandu SR, Patek SD, Lach JC, Goldman MD
+  venue: Gait & Posture 2016;49:340–5
+  year: 2016
+  link: https://doi.org/f87cps
+- id: cincotta2016fatigue
+  title: 'Fatigue and fluid hydration status in multiple sclerosis: a hypothesis'
+  authors: Cincotta MC, Engelhard MM, Stankey M, Goldman MD
+  venue: Multiple Sclerosis Journal 2016;22:1438–43
+  year: 2016
+  link: https://doi.org/f9h3r7
+- id: dandu2016determining
+  title: Determining physiological significance of inertial gait features in multiple sclerosis
+  authors: Dandu SR, Engelhard MM, Goldman MD, Lach J
+  venue: 2016 IEEE 13th International Conference on Wearable and Implantable Body Sensor Networks (BSN), IEEE; 2016, p. 266–71
+  year: 2016
+  link: https://doi.org/g3w4q2
+- id: engelhard2016adaptive
+  title: Adaptive symptom reporting for mobile patient-reported disability assessment
+  authors: Engelhard MM, Lach JC, Schmidt KM, Goldman MD, Patek SD
+  venue: 2016 IEEE Wireless Health (WH), IEEE; 2016, p. 1–8
+  year: 2016
+  link: https://doi.org/g3w4qv
+- id: engelhard2015toward
+  title: Toward detection and monitoring of gait pathology using inertial sensors under rotation, scale, and offset invariant dynamic time warping
+  authors: Engelhard MM, Dandu SR, Lach JC, Goldman MD, Patek SD
+  venue: Proceedings of the 10th EAI International Conference on Body Area Networks, 2015, p. 269–75
+  year: 2015
+  link: https://doi.org/g3w4rp
+- id: gong2015correlations
+  title: Correlations between inertial body sensor measures and clinical measures in multiple sclerosis
+  authors: Gong J, Engelhard MM, Goldman MD, Lach J
+  venue: Proceedings of the 10th EAI International Conference on Body Area Networks, 2015, p. 18–24
+  year: 2015
+  link: https://doi.org/g3w4rh
+- id: ribeiro2007novel
+  title: Novel experience induces persistent sleep-dependent plasticity in the cortex but not in the hippocampus
+  authors: Ribeiro S, Shi X, Engelhard M, Zhou Y, Zhang H, Gervasoni D, Lin S-C, Wada K, Lemos NA, Nicolelis MA
+  venue: Frontiers in Neuroscience 2007;1:11
+  year: 2007
+  link: https://doi.org/10.3389/neuro.01.1.1.003.2007

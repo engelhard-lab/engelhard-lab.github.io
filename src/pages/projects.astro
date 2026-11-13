@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Entry from '../components/Entry.astro';
+
+const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+const sections = [
+  { heading: 'Current Projects', items: projects.filter((p) => p.data.status === 'current') },
+  { heading: 'Centers and Consortia', items: projects.filter((p) => p.data.status === 'group') },
+  { heading: 'Completed Projects', items: projects.filter((p) => p.data.status === 'completed') },
+];
+---
+
+<Base title="Projects" description="Current and completed projects in the Engelhard Lab.">
+  <h1>Projects</h1>
+  {sections.map(({ heading, items }) => (
+    <section>
+      <h2 class="section">{heading}</h2>
+      {items.length > 0
+        ? items.map((entry) => <Entry entry={entry} />)
+        : <p class="empty">None listed yet.</p>}
+    </section>
+  ))}
+</Base>
+
+<style>
+  .section { font-size: 1.45rem; margin: 2.5rem 0 0.5rem; }
+  .empty { color: var(--muted); border-top: 1px solid var(--line); padding-top: 1rem; }
+</style>

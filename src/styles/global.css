@@ -1,0 +1,44 @@
+:root {
+  --text: #222;
+  --muted: #666;
+  --line: #ddd;
+  --link: #00539b;
+  --font: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --width: 960px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+h1, h2, h3 { font-weight: 600; line-height: 1.25; margin: 0 0 0.6em; }
+h1 { font-size: 1.75rem; }
+h2 { font-size: 1.3rem; margin-top: 1.8em; }
+h3 { font-size: 1.05rem; }
+
+p { margin: 0 0 1em; }
+ul, ol { padding-left: 1.3em; margin: 0 0 1em; }
+
+a { color: var(--link); }
+a:hover { text-decoration: none; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+.wrap { max-width: var(--width); margin: 0 auto; padding: 0 16px; }
+.narrow { max-width: 720px; }
+
+/* Used by the inner pages; will be revisited when those are redesigned. */
+.page-head { padding: 2rem 0 1rem; }
+.eyebrow { font-size: 0.85rem; color: var(--muted); margin: 0 0 0.25rem; }
+.lede { color: var(--muted); }
+.button, .arrow-link { color: var(--link); }
+.prose { max-width: 720px; }

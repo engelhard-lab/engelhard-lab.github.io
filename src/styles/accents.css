@@ -1,0 +1,48 @@
+/*
+  Color accents. Everything here is optional: to remove all of it, delete the
+  `import '../styles/accents.css'` line in src/layouts/Base.astro (or delete a
+  single block below to drop just that accent).
+*/
+:root {
+  --duke-blue: #012169;
+  --header-tint: #f3f6fa;
+  --warm: #c84e00; /* Duke "Copper" */
+}
+
+/* 1. Duke Blue stripe across the top, and the lab name in Duke Blue. */
+body { border-top: 4px solid var(--duke-blue); }
+.site-header a.brand { color: var(--duke-blue); }
+
+/* Light copper boxes: the home page boxes (goal, note to students), and the
+   Location and Lab culture text on About Us. */
+:root { --warm-tint: #fcf1ea; }
+.home aside.goal, .home aside.note {
+  background: var(--warm-tint);
+  border-color: #f0d9ca;
+  border-left-color: var(--warm);
+}
+section.two-col > div:last-child {
+  background: var(--warm-tint);
+  border: 1px solid #f0d9ca;
+  border-left: 4px solid var(--warm);
+  padding: 1rem 1.25rem;
+}
+section.two-col > div:last-child > :last-child { margin-bottom: 0; }
+
+/* 2. Short accent rule under section headings (not under project/method titles). */
+main h2:not(.entry h2)::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  margin-top: 0.4rem;
+  border-radius: 2px;
+  background: var(--duke-blue);
+}
+
+/* 3. Lightly tinted header band. */
+.site-header { background: var(--header-tint); }
+
+/* 5. Warm accent, used sparingly: the current menu item and Lab news dates. */
+.site-header nav a[aria-current='page'] { color: var(--warm) !important; }
+.home .news .date { color: var(--warm); }

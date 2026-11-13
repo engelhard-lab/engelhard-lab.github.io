@@ -1,0 +1,12 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Entry from '../components/Entry.astro';
+
+const methods = (await getCollection('methods')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<Base title="Methods" description="Methods development in the Engelhard Lab.">
+  <h1>Methods</h1>
+  {methods.map((entry) => <Entry entry={entry} />)}
+</Base>

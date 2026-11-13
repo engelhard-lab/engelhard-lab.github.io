@@ -1,0 +1,104 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import Slideshow from '../components/Slideshow.astro';
+import { Content as Location } from '../content/about/location.md';
+import { Content as Culture } from '../content/about/culture.md';
+import medicalCenter from '../assets/medical-center.jpg';
+
+// Sorted by start year (earliest first), then by `order`. `order: 1` (the PI) stays
+// on top; people without a start year go last.
+const startKey = (m: { data: { start?: number; order: number } }) =>
+  m.data.order <= 1 ? -Infinity : (m.data.start ?? Infinity);
+const members = (await getCollection('members')).sort(
+  (a, b) => startKey(a) - startKey(b) || a.data.order - b.data.order,
+);
+const current = members.filter((m) => !m.data.former);
+// People with a photo go in the grid; the rest are listed below it until they have one.
+const pictured = current.filter((m) => m.data.photo);
+const unpictured = current.filter((m) => !m.data.photo);
+
+// Former members are listed under these headings, in this order; any other
+// `group:` value gets its own heading after these.
+const FORMER_GROUPS = ['Research Fellows', 'Medical Students', "Master's Students", 'Undergraduate Students', 'Interns'];
+// Within each heading: most recent graduation year first, then by `order`.
+const alumni = members
+  .filter((m) => m.data.former)
+  .sort((a, b) => (b.data.grad ?? 0) - (a.data.grad ?? 0) || a.data.order - b.data.order);
+const former = [...new Set([...FORMER_GROUPS, ...alumni.map((m) => m.data.group)])]
+  .map((group) => ({ group, people: alumni.filter((m) => m.data.group === group) }))
+  .filter((g) => g.people.length > 0);
+const outings = (await getCollection('outings'))
+  .sort((a, b) => a.data.order - b.data.order)
+  .map((o) => ({ image: o.data.image, caption: o.data.caption }));
+---
+
+<Base title="About Us" description="Location, team, and culture of the Engelhard Lab.">
+  <h1>About Us</h1>
+
+  <section class="two-col">
+    <Image src={medicalCenter} alt="Duke University Medical Center" width={900} class="photo" />
+    <div><h2>Location</h2><Location /></div>
+  </section>
+
+  <section>
+    <h2>Team</h2>
+    <ul class="team">
+      {pictured.map((m) => (
+        <li>
+          <Image src={m.data.photo!} alt={m.data.name} width={400} class="portrait" />
+          <p class="name">{m.data.name}</p>
+          <p class="role">{m.data.title}</p>
+        </li>
+      ))}
+    </ul>
+    {unpictured.length > 0 && (
+      <ul class="former also">
+        {unpictured.map((m) => <li>{m.data.name}, {m.data.title}</li>)}
+      </ul>
+    )}
+  </section>
+
+  <section class="two-col">
+    <Slideshow slides={outings} />
+    <div><h2>Lab culture</h2><Culture /></div>
+  </section>
+
+  <section>
+    <h2>Former members</h2>
+    {former.length > 0
+      ? former.map(({ group, people }) => (
+        <>
+          <h3>{group}</h3>
+          <ul class="former">
+            {people.map((m) => (
+              <li>
+                {m.data.name}, {m.data.title}{m.data.grad && ` ’${String(m.data.grad).slice(-2)}`}{m.data.years && ` (${m.data.years})`}{m.data.now && <>. Now: {m.data.now}</>}
+              </li>
+            ))}
+          </ul>
+        </>
+      ))
+      : <p class="muted">None listed yet.</p>}
+  </section>
+</Base>
+
+<style>
+  section { padding: 2rem 0; border-top: 1px solid var(--line); }
+  section h2 { margin-top: 0; }
+  .two-col { display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; align-items: start; }
+  @media (max-width: 680px) { .two-col { grid-template-columns: 1fr; gap: 1rem; } }
+  .photo { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+
+  .team { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1.5rem; }
+  .portrait { width: 100%; aspect-ratio: 1; object-fit: cover; object-position: center 25%; margin-bottom: 0.5rem; }
+  .name { font-weight: 600; margin: 0; }
+  .role { color: var(--muted); margin: 0; font-size: 0.95rem; }
+
+  section h3 { font-size: 1rem; margin: 1.5rem 0 0.5rem; }
+  section h2 + h3 { margin-top: 0.5rem; }
+  .former { padding-left: 1.2em; margin: 0; }
+  .also { margin-top: 1.5rem; }
+  .muted { color: var(--muted); }
+</style>

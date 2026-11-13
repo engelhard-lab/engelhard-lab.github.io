@@ -1,0 +1,23 @@
+---
+// Shows an email address as plain text without putting it in the page source.
+// The address is split into reversed pieces in data attributes and put back
+// together by a small script once the page loads. Visitors without JavaScript
+// see "user [at] domain" instead.
+interface Props {
+  user: string;
+  domain: string;
+}
+const { user, domain } = Astro.props;
+const rev = (s: string) => [...s].reverse().join('');
+---
+
+<span class="email" data-u={rev(user)} data-d={rev(domain)}>
+  {user} [at] {domain.replace(/\./g, ' [dot] ')}
+</span>
+
+<script>
+  const rev = (s: string) => [...s].reverse().join('');
+  document.querySelectorAll<HTMLElement>('.email[data-u]').forEach((el) => {
+    el.textContent = `${rev(el.dataset.u ?? '')}@${rev(el.dataset.d ?? '')}`;
+  });
+</script>
