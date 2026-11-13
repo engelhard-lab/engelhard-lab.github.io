@@ -7,6 +7,6 @@
 
 Our [Projects](/projects/) emphasize disease processes that evolve over longer timescales, including developmental conditions, mental health, and cardiometabolic health.
 
-Understanding these conditions requires [Methods](/methods/) that interpret an ever-growing history of observations across multiple data modalities, then present it to patients and providers in a way that is interpretable and actionable.
+Understanding these conditions requires [Methods](/methods/) that interpret an ever-growing history of observations across multiple data modalities, then present it to patients and providers in a way that is interpretable and actionable. See what we've been reading in our [reading group](https://github.com/engelhard-lab/reading-group).
 
 Our work is guided first by scientific integrity and a commitment to human understanding, and we try to carry it out with respect, kindness, and humility. Learn more about our team and lab culture on our [About Us](/about/) page.
