@@ -9,4 +9,4 @@ Our [Projects](/projects/) emphasize disease processes that evolve over longer t
 
 Understanding these conditions requires [Methods](/methods/) that interpret an ever-growing history of observations across multiple data modalities, then present it to patients and providers in a way that is interpretable and actionable. Visit our [reading group page](https://github.com/engelhard-lab/reading-group) to see what methods we've been learning about recently.
 
-Our work is guided first by scientific integrity and a commitment to human understanding, and we try to carry it out with respect, kindness, and humility. Learn more about our team and lab culture on our [About Us](/about/) page.
+We are committed to scientific integrity and promoting human understanding, and we do our best to maintain a supportive environment in which to carry out our work. Learn more about our team and lab culture on our [About Us](/about/) page.
