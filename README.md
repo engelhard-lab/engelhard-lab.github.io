@@ -13,7 +13,7 @@ Source for [engelhard-lab.github.io](https://engelhard-lab.github.io), built wit
 | Projects | One Markdown file per project in `src/content/projects/` (`status: current`, `group` for Centers and Consortia, or `completed`; optional `funding:` line and `reporter:` link) |
 | Methods | One Markdown file per area in `src/content/methods/` |
 | Publications | `src/data/publications.yaml` |
-| Team and former members | One Markdown file per person in `src/content/members/`, with the photo next to it. `start:` (year joined) sets the order; `former: true` moves someone to Former members, listed under their `group:` heading, with `grad:` (graduation year) shown as ’25 |
+| Team and former members | One Markdown file per person in `src/content/members/`, with the photo next to it. `group:` (e.g. "PhD Students") sets where they're listed, then `start:` (year joined), then surname; the group order is the `GROUPS` list in `src/pages/about.astro`. `former: true` moves someone to Former members, listed under their `group:` heading, with `grad:` (graduation year) shown as ’25 |
 | Team outing photos | One Markdown file per photo in `src/content/outings/` with `image:` and `caption:` |
 | About Us text | `src/content/about/location.md` and `src/content/about/culture.md` |
 | CV | Replace `public/cv.pdf` |

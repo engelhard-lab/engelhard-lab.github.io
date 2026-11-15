@@ -1,5 +1,5 @@
 ---
 name: "Max Rerisi"
 title: "Undergraduate Researcher"
-order: 29
+group: "Undergraduate Students"
 ---

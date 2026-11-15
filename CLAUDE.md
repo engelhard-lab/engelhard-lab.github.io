@@ -18,7 +18,7 @@ Astro 5 static site for https://engelhard-lab.github.io. Pushing to `main` build
 
 ## Content model (`src/content.config.ts`)
 
-- **members**: `name`, `title`, `photo`, `start` (year joined; current members sort by it, and `order: 1` keeps the PI first), `order` (tie-break), `former`, `group` (heading for former members), `grad` (shown as ’25), `years`, `now`. Current members without a photo are listed below the photo grid.
+- **members**: `name`, `title`, `photo`, `group` (e.g. "PhD Students"; current members sort by the `GROUPS` list in `src/pages/about.astro`, and former members are listed under it as a heading), `start` (year joined; sorts within a group), `order` (optional manual override; otherwise ties go by surname), `former`, `grad` (shown as ’25), `years`, `now`. Current members without a photo are listed below the photo grid.
 - **projects**: `status` is `current`, `group` (shown as "Centers and Consortia"), or `completed`. Optional fields: `funding` (one line), `reporter` (NIH RePORTER URL), `image`, `imageAlt`, `imageCredit`, `publications` (ids), `order`. Each section is ordered by start date, newest first, except that IMPACT-MH is pinned first by request.
 - **methods**: same fields as projects, without `status`, `funding`, or `reporter`.
 - **publications**: `src/data/publications.yaml`, built from the owner's Duke CV. `type` is `article`, `chapter`, or `preprint`; preprints get their own section at the top of the Publications page. Ids follow the pattern surname + year + first long word (e.g. `hill2025prediction`).

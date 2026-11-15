@@ -7,26 +7,47 @@ import { Content as Location } from '../content/about/location.md';
 import { Content as Culture } from '../content/about/culture.md';
 import medicalCenter from '../assets/medical-center.jpg';
 
-// Sorted by start year (earliest first), then by `order`. `order: 1` (the PI) stays
-// on top; people without a start year go last.
-const startKey = (m: { data: { start?: number; order: number } }) =>
-  m.data.order <= 1 ? -Infinity : (m.data.start ?? Infinity);
-const members = (await getCollection('members')).sort(
-  (a, b) => startKey(a) - startKey(b) || a.data.order - b.data.order,
-);
-const current = members.filter((m) => !m.data.former);
+// Every member has a `group:`. Current members are listed in this group order, and
+// former members are listed under these headings in the same order. Any other
+// `group:` value comes after these.
+const GROUPS = [
+  'Principal Investigator',
+  'Postdoctoral Fellows',
+  'Research Fellows',
+  'PhD Students',
+  'Medical Students',
+  "Master's Students",
+  'Undergraduate Students',
+  'Interns',
+];
+const groupRank = (g: string) => (GROUPS.includes(g) ? GROUPS.indexOf(g) : GROUPS.length);
+// Surname for alphabetical tie-breaks: the last word of the name, ignoring a
+// parenthetical nickname or trailing degrees, e.g. "Xiaofeng (Finn) Guo" -> "Guo".
+const surname = (name: string) =>
+  name.split(',')[0].replace(/\(.*?\)/g, '').trim().split(/\s+/).pop()!;
+
+const members = await getCollection('members');
+// Current team: by group, then start year (earliest first; none goes last), then
+// `order` (only needed as a manual override), then surname.
+const current = members
+  .filter((m) => !m.data.former)
+  .sort(
+    (a, b) =>
+      groupRank(a.data.group) - groupRank(b.data.group) ||
+      (a.data.start ?? Infinity) - (b.data.start ?? Infinity) ||
+      a.data.order - b.data.order ||
+      surname(a.data.name).localeCompare(surname(b.data.name)),
+  );
 // People with a photo go in the grid; the rest are listed below it until they have one.
 const pictured = current.filter((m) => m.data.photo);
 const unpictured = current.filter((m) => !m.data.photo);
 
-// Former members are listed under these headings, in this order; any other
-// `group:` value gets its own heading after these.
-const FORMER_GROUPS = ['Research Fellows', 'Medical Students', "Master's Students", 'Undergraduate Students', 'Interns'];
-// Within each heading: most recent graduation year first, then by `order`.
+// Former members, under their group heading: most recent graduation year first,
+// then by `order`.
 const alumni = members
   .filter((m) => m.data.former)
   .sort((a, b) => (b.data.grad ?? 0) - (a.data.grad ?? 0) || a.data.order - b.data.order);
-const former = [...new Set([...FORMER_GROUPS, ...alumni.map((m) => m.data.group)])]
+const former = [...new Set([...GROUPS, ...alumni.map((m) => m.data.group)])]
   .map((group) => ({ group, people: alumni.filter((m) => m.data.group === group) }))
   .filter((g) => g.people.length > 0);
 const outings = (await getCollection('outings'))
