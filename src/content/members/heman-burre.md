@@ -1,6 +1,7 @@
 ---
 name: "Heman Burre"
-title: "Undergraduate Researcher"
-group: "Undergraduate Students"
+title: "Research Assistant"
+group: "Research Staff"
 photo: ./heman-burre.jpg
+start: 2025
 ---
