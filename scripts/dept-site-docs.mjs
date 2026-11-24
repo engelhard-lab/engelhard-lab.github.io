@@ -81,39 +81,54 @@ function researchPage() {
 }
 
 function membersPage() {
-  // Same ordering as src/pages/about.astro.
-  const startKey = (m) => ((m.data.order ?? 100) <= 1 ? -Infinity : (m.data.start ?? Infinity));
+  // Same grouping and ordering as src/pages/about.astro.
+  const GROUPS = [
+    'Principal Investigator',
+    'Postdoctoral Fellows',
+    'Research Fellows',
+    'PhD Students',
+    'Research Staff',
+    'Medical Students',
+    "Master's Students",
+    'Undergraduate Students',
+    'Interns',
+  ];
+  const group = (m) => m.data.group || 'Other';
+  const groupRank = (g) => (GROUPS.includes(g) ? GROUPS.indexOf(g) : GROUPS.length);
   const order = (m) => m.data.order ?? 100;
-  const members = readDir('members').sort((a, b) => startKey(a) - startKey(b) || order(a) - order(b));
-  const current = members.filter((m) => !m.data.former);
-  const FORMER_GROUPS = ['Research Fellows', 'Medical Students', "Master's Students", 'Undergraduate Students', 'Interns'];
+  // "Xiaofeng (Finn) Guo" -> "Guo"; "Matthew Engelhard, MD, PhD" -> "Engelhard".
+  const surname = (name) => name.split(',')[0].replace(/\(.*?\)/g, '').trim().split(/\s+/).pop();
+  const members = readDir('members');
+  const current = members
+    .filter((m) => !m.data.former)
+    .sort((a, b) =>
+      groupRank(group(a)) - groupRank(group(b)) ||
+      (a.data.start ?? Infinity) - (b.data.start ?? Infinity) ||
+      order(a) - order(b) ||
+      surname(a.data.name).localeCompare(surname(b.data.name)));
   const alumni = members
     .filter((m) => m.data.former)
     .sort((a, b) => (b.data.grad ?? 0) - (a.data.grad ?? 0) || order(a) - order(b));
-  const groups = [...new Set([...FORMER_GROUPS, ...alumni.map((m) => m.data.group || 'Other')])];
+  const currentGroups = [...new Set([...GROUPS, ...current.map(group)])];
+  const groups = [...new Set([...GROUPS, ...alumni.map(group)])];
 
-  // Current members are grouped by the role at the start of their title
-  // ("PhD Student, Biostatistics" -> "PhD Students"), keeping the site's order within each.
-  const ROLES = [
-    ['Principal Investigator', 'Principal Investigator'],
-    ['PhD Student', 'PhD Students'],
-    ["Master's Student", "Master's Students"],
-    ['Undergraduate', 'Undergraduate Researchers'],
-  ];
-  const roleOf = (m) => ROLES.find(([prefix]) => m.data.title.startsWith(prefix))?.[1] ?? 'Other';
-  // Drop the role from the title, since the heading already says it: "PhD Student, CBB" -> "CBB".
-  const detail = (m) => m.data.title.replace(/^[^,]*(, )?/, (r) =>
-    ROLES.some(([prefix]) => r.startsWith(prefix)) ? '' : r);
+  // Under a subheading, drop the role when it just repeats the heading:
+  // "PhD Student, CBB" under "PhD Students" -> "CBB"; "Principal Investigator" -> "".
+  const detail = (m) => {
+    const [role, ...rest] = m.data.title.split(', ');
+    const g = group(m);
+    return role === g || role + 's' === g ? rest.join(', ') : m.data.title;
+  };
   const out = ['# Lab Members', '## Current members'];
-  for (const role of [...ROLES.map(([, h]) => h), 'Other']) {
-    const people = current.filter((m) => roleOf(m) === role);
+  for (const g of currentGroups) {
+    const people = current.filter((m) => group(m) === g);
     if (!people.length) continue;
-    out.push(`### ${role}`);
+    out.push(`### ${g}`);
     out.push(people.map((m) => `- ${esc(m.data.name)}${detail(m) ? ', ' + esc(detail(m)) : ''}`).join('\n'));
   }
   out.push('## Former members');
   for (const g of groups) {
-    const people = alumni.filter((m) => (m.data.group || 'Other') === g);
+    const people = alumni.filter((m) => group(m) === g);
     if (!people.length) continue;
     out.push(`### ${g}`);
     out.push(people.map((m) => {

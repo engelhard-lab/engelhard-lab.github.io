@@ -47,7 +47,7 @@ The larger buffer avoids an upload disconnect seen on big pushes. Pushing workfl
 
 ## Departmental site (Word documents)
 
-The owner keeps four pages on the Duke departmental site in sync with this site: About the Lab (goal statement, note to prospective students, Lab culture), Research (the home page text, linking to the github.io Projects and Methods pages), Lab Members (names only, current members under role subheadings, then former members), and Publications. To refresh them, run:
+The owner keeps four pages on the Duke departmental site in sync with this site: About the Lab (goal statement, note to prospective students, Lab culture), Research (the home page text, linking to the github.io Projects and Methods pages), Lab Members (names only, current and former members under their `group:` headings), and Publications. To refresh them, run:
 
 ```bash
 PATH=/usr/local/bin:$PATH node scripts/dept-site-docs.mjs
