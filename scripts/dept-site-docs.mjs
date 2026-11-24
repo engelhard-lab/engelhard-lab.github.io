@@ -88,6 +88,7 @@ function membersPage() {
     'Research Fellows',
     'PhD Students',
     'Research Staff',
+    'Research Support',
     'Medical Students',
     "Master's Students",
     'Undergraduate Students',
