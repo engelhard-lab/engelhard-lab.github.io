@@ -44,3 +44,13 @@ git -c http.postBuffer=524288000 push origin main
 ```
 
 The larger buffer avoids an upload disconnect seen on big pushes. Pushing workflow changes needs a token with the `workflow` scope. After pushing, check the "Deploy site" run (for example via `https://api.github.com/repos/engelhard-lab/engelhard-lab.github.io/actions/runs`) and then the live page.
+
+## Departmental site (Word documents)
+
+The owner keeps four pages on the Duke departmental site in sync with this site: About the Lab (goal statement, note to prospective students, Lab culture), Research (the home page text, linking to the github.io Projects and Methods pages), Lab Members (names only, current members under role subheadings, then former members), and Publications. To refresh them, run:
+
+```bash
+PATH=/usr/local/bin:$PATH node scripts/dept-site-docs.mjs
+```
+
+It reads the same content files as the site and writes `.docx` files (plus the intermediate `.md`) to `dept-site/`, which is gitignored. Styles come from `scripts/dept-site-reference.docx`. Its ordering logic copies `src/pages/*.astro`, so update it if those pages change how they sort or group entries. Site-relative links are rewritten to absolute `https://engelhard-lab.github.io/...` URLs.
